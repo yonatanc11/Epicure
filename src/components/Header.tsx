@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { NAV_LINKS } from '../constants/navigation'
-import { LABELS, EMOJIS } from '../constants/strings'
+import { LABELS } from '../constants/strings'
+import { ICONS } from '../constants/icons'
 import HamburgerMenu from './HamburgerMenu'
 import SearchOverlay from './SearchOverlay'
 import BagOverlay from './BagOverlay'
@@ -14,19 +15,29 @@ function Header() {
 
     return (
         <header className="@container relative">
+            {/* Mobile layout */}
             <div className="flex items-center justify-between px-6 py-4 @[768px]:hidden">
-                <button onClick={() => setOverlay('menu')} className="text-2xl">{EMOJIS.menu}</button>
-                <span className="text-2xl">{EMOJIS.logo}</span>
-                <div className="flex items-center gap-4 text-xl">
-                    <button onClick={() => setOverlay('search')}>{EMOJIS.search}</button>
-                    <button>{EMOJIS.user}</button>
-                    <button onClick={() => setOverlay('bag')}>{EMOJIS.bag}</button>
+                <button onClick={() => setOverlay('menu')}>
+                    <img src={ICONS.hamburger} alt="menu" className="w-6 h-6" />
+                </button>
+                <img src={ICONS.logo} alt="Epicure logo" className="h-8" />
+                <div className="flex items-center gap-4">
+                    <button onClick={() => setOverlay('search')}>
+                        <img src={ICONS.search} alt="search" className="w-6 h-6" />
+                    </button>
+                    <button>
+                        <img src={ICONS.user} alt="user" className="w-6 h-6" />
+                    </button>
+                    <button onClick={() => setOverlay('bag')}>
+                        <img src={ICONS.bag} alt="bag" className="w-6 h-6" />
+                    </button>
                 </div>
             </div>
 
+            {/* Desktop layout */}
             <div className="hidden @[768px]:flex items-center justify-between px-10 py-4">
                 <div className="flex items-center gap-6">
-                    <span className="text-2xl">{EMOJIS.logo}</span>
+                    <img src={ICONS.logo} alt="Epicure logo" className="h-8" />
                     <span className="font-bold font-primary tracking-widest text-sm">{LABELS.brandName}</span>
                     <nav className="flex items-center gap-6">
                         {NAV_LINKS.primary.map((link) => (
@@ -36,10 +47,16 @@ function Header() {
                         ))}
                     </nav>
                 </div>
-                <div className="flex items-center gap-4 text-xl">
-                    <button onClick={() => setOverlay('search')}>{EMOJIS.search}</button>
-                    <button>{EMOJIS.user}</button>
-                    <button onClick={() => setOverlay('bag')}>{EMOJIS.bag}</button>
+                <div className="flex items-center gap-4">
+                    <button onClick={() => setOverlay('search')}>
+                        <img src={ICONS.search} alt="search" className="w-6 h-6" />
+                    </button>
+                    <button>
+                        <img src={ICONS.user} alt="user" className="w-6 h-6" />
+                    </button>
+                    <button onClick={() => setOverlay('bag')}>
+                        <img src={ICONS.bag} alt="bag" className="w-6 h-6" />
+                    </button>
                 </div>
             </div>
 
@@ -47,6 +64,7 @@ function Header() {
             {overlay === 'search' && <SearchOverlay onClose={closeOverlay} />}
             {overlay === 'bag' && <BagOverlay onClose={closeOverlay} />}
         </header>
+
     )
 }
 

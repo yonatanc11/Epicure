@@ -1,4 +1,4 @@
-import type { Dish } from '../types/dish.ts'
+import type { Dish } from '../types/dish'
 
 const PLACEHOLDER = 'https://placehold.co/400x300'
 

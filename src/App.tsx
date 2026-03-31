@@ -1,13 +1,10 @@
-import Header from './components/Header'
-import Hero from './components/Hero'
+import HomePage from './pages/HomePage'
 
-function App() {
+export default function App() {
   return (
     <div className="@container">
-      <Header />
-      <Hero />
+      <HomePage />
     </div>
   )
 }
 
-export default App
