@@ -19,6 +19,16 @@ export const LABELS = {
   googlePlay: 'Google Play',
   downloadOnThe: 'Download on the',
   appStore: 'App Store',
+  brandName: 'EPICURE',
+  search: 'Search',
+}
+export const EMOJIS = {
+  bag: '🛍',
+  close: '✕',
+  menu: '☰',
+  logo: '🍴',
+  search: '🔍',
+  user: '👤',
 }
 
 export const ALT_TEXT = {
