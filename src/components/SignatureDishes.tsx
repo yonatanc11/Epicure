@@ -1,14 +1,14 @@
 import { LABELS } from '../constants/strings'
 import CardCarousel from './CardCarousel'
 import DishCard from './DishCard'
-import { signatureDishes } from '../data/homepage'
+import { dishes } from '../data/dishes'
 
 export default function SignatureDishes() {
     return (
         <section className="px-6 py-8">
             <h2 className="font-bold font-primary text-lg mb-4">{LABELS.signatureDishes}</h2>
             <CardCarousel>
-                {signatureDishes.map((dish) => (
+                {dishes.map((dish) => (
                     <DishCard
                         key={dish.id}
                         image={dish.image}

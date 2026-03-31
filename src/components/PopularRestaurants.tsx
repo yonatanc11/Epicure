@@ -1,7 +1,7 @@
 import { LABELS } from '../constants/strings'
 import CardCarousel from './CardCarousel'
 import RestaurantCard from './RestaurantCard'
-import { popularRestaurants } from '../data/homepage'
+import { restaurants } from '../data/restaurants'
 
 
 export default function PopularRestaurants() {
@@ -9,7 +9,7 @@ export default function PopularRestaurants() {
     <section className="px-6 py-8">
       <h2 className="font-bold font-primary text-lg mb-4">{LABELS.popularRestaurants}</h2>
       <CardCarousel>
-        {popularRestaurants.map((restaurant) => (
+        {restaurants.map((restaurant) => (
           <RestaurantCard
             key={restaurant.id}
             image={restaurant.image}
