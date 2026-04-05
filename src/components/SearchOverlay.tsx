@@ -6,19 +6,17 @@ interface SearchOverlayProps {
     onClose: () => void
 }
 
-function SearchOverlay({ onClose }: SearchOverlayProps) {
+export default function SearchOverlay({ onClose }: SearchOverlayProps) {
     return (
         <Overlay onClose={onClose} title={LABELS.search}>
             <div className="flex items-center border border-gray rounded-md px-4 py-3 gap-3">
-                <span className="text-gray">{ICONS.search}</span>
+                <img src={ICONS.search} alt="search" className="w-5 h-5 opacity-40" />
                 <input
                     type="text"
                     placeholder={LABELS.searchPlaceholder}
-                    className="w-full outline-none font-primary text-sm"
+                    className="text-h1 text-gray w-full outline-none bg-transparent placeholder:text-gray"
                 />
             </div>
         </Overlay>
     )
 }
-
-export default SearchOverlay

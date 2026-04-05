@@ -1,6 +1,7 @@
 import type { Dish } from '../types/dish'
-
-const PLACEHOLDER = 'https://placehold.co/400x300'
+import padKiMaoImg from '../assets/images/dishes/Pad Ki Mao.png'
+import garbanzoFritoImg from '../assets/images/dishes/Garbanzo Frito.png'
+import smokedPizzaImg from '../assets/images/dishes/Smoked Pizza.png'
 
 export const dishes: Dish[] = [
   {
@@ -10,7 +11,7 @@ export const dishes: Dish[] = [
     icon: 'spicy',
     price: 88,
     restaurant: 'Claro',
-    image: PLACEHOLDER,
+    image: padKiMaoImg,
   },
   {
     id: 'garbanzo',
@@ -18,15 +19,15 @@ export const dishes: Dish[] = [
     ingredients: 'Polenta fingers, magic chili cream, verde',
     price: 78,
     restaurant: 'Lumia',
-    image: PLACEHOLDER,
+    image: garbanzoFritoImg,
   },
   {
-    id: 'smokey-fish',
-    name: 'Smokey Fish',
+    id: 'smoked-pizza',
+    name: 'Smoked Pizza',
     ingredients: 'Trout fillet, lemon butter, capers, herbs',
     icon: 'vegetarian',
     price: 65,
     restaurant: 'Tiger Lily',
-    image: PLACEHOLDER,
+    image: smokedPizzaImg,
   },
 ]

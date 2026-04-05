@@ -10,18 +10,26 @@
   --color-white: #FFFFFF;
 }
 
+@layer base {
+  * {
+    letter-spacing: normal;
+  }
+}
+
 @layer components {
+
   .text-h1 {
     font-family: var(--font-primary);
     font-weight: 100;
-    font-size: 1.5rem; 
+    font-size: 24px;
     color: #000000;
+    letter-spacing: normal;
   }
 
   .text-h2 {
     font-family: var(--font-primary);
     font-weight: 100;
-    font-size: 1rem; 
+    font-size: 16px;
     color: #000000;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -30,28 +38,76 @@
   .text-h3 {
     font-family: var(--font-primary);
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: 18px;
     color: #000000;
+    letter-spacing: normal;
   }
 
   .text-body {
     font-family: var(--font-primary);
     font-weight: 100;
-    font-size: 1rem; 
+    font-size: 16px;
     color: #000000;
+    letter-spacing: normal;
   }
 
   .text-label {
     font-family: var(--font-primary);
     font-weight: 100;
-    font-size: 0.875rem;
+    font-size: 14px;
     color: #979797;
+    letter-spacing: normal;
   }
 
   .text-btn {
     font-family: var(--font-primary);
     font-weight: 100;
-    font-size: 1rem;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .desktop-text-h1 {
+    font-family: var(--font-primary);
+    font-weight: 100;
+    font-size: 32px;
+    color: #000000;
+  }
+
+  .desktop-text-h2 {
+    font-family: var(--font-primary);
+    font-weight: 100;
+    font-size: 30px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .desktop-text-h3 {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 40px;
+    color: #000000;
+  }
+
+  .desktop-text-body {
+    font-family: var(--font-primary);
+    font-weight: 100;
+    font-size: 24px;
+    color: #000000;
+  }
+
+  .desktop-text-label {
+    font-family: var(--font-primary);
+    font-weight: 100;
+    font-size: 14px;
+    color: #979797;
+  }
+
+  .desktop-text-btn {
+    font-family: var(--font-primary);
+    font-weight: 100;
+    font-size: 16px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
   }

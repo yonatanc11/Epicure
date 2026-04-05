@@ -17,9 +17,9 @@ function AboutSection() {
       </div>
 
       <div className="w-full">
-        <h3 className="text-h3 mb-4">{LABELS.aboutUs}</h3>
+        <h3 className="text-h1 mb-4">{LABELS.aboutUs}</h3>
         <p className="text-body text-gray leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum non eu ipsum. Cras porta malesuada eros, eget blandit turpis suscipit at. Vestibulum sed massa in magna sodales porta. Vivamus elit urna, dignissim a vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum no eu ipsum. Cras porta malesuada eros.
+          {LABELS.aboutUsDescription}
         </p>
       </div>
     </section>
