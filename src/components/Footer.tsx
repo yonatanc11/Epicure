@@ -5,7 +5,7 @@ function Footer() {
     <footer className="px-6 py-8">
       <nav className="flex flex-col gap-6">
         {NAV_LINKS.secondary.map((link) => (
-          <a key={link.path} href={link.path} className="font-primary text-sm">
+          <a key={link.path} href={link.path} className="text-body">
             {link.label}
           </a>
         ))}

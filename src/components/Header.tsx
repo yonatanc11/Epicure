@@ -15,7 +15,6 @@ function Header() {
 
     return (
         <header className="@container relative">
-            {/* Mobile layout */}
             <div className="flex items-center justify-between px-6 py-4 @[768px]:hidden">
                 <button onClick={() => setOverlay('menu')}>
                     <img src={ICONS.hamburger} alt="menu" className="w-6 h-6" />
@@ -34,14 +33,13 @@ function Header() {
                 </div>
             </div>
 
-            {/* Desktop layout */}
             <div className="hidden @[768px]:flex items-center justify-between px-10 py-4">
                 <div className="flex items-center gap-6">
                     <img src={ICONS.logo} alt="Epicure logo" className="h-8" />
-                    <span className="font-bold font-primary tracking-widest text-sm">{LABELS.brandName}</span>
+                    <span className="text-h2">{LABELS.brandName}</span>
                     <nav className="flex items-center gap-6">
                         {NAV_LINKS.primary.map((link) => (
-                            <a key={link.path} href={link.path} className="font-primary text-sm">
+                            <a key={link.path} href={link.path} className="text-body">
                                 {link.label}
                             </a>
                         ))}

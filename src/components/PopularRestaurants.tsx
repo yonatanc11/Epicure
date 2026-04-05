@@ -7,7 +7,7 @@ import { restaurants } from '../data/restaurants'
 export default function PopularRestaurants() {
   return (
     <section className="px-6 py-8">
-      <h2 className="font-bold font-primary text-lg mb-4">{LABELS.popularRestaurants}</h2>
+      <h2 className="text-h2 mb-4">{LABELS.popularRestaurants}</h2>
       <CardCarousel>
         {restaurants.map((restaurant) => (
           <RestaurantCard
@@ -18,7 +18,7 @@ export default function PopularRestaurants() {
           />
         ))}
       </CardCarousel>
-      <a href="/restaurants" className="flex items-center gap-1 mt-4 font-primary text-sm">
+      <a href="/restaurants" className="flex items-center gap-1 mt-4 text-body">
         {LABELS.allRestaurants} ≫
       </a>
     </section>

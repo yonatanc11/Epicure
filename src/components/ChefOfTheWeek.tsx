@@ -8,7 +8,7 @@ const chef = chefs[0]
 function ChefOfTheWeek() {
     return (
         <section className="bg-primary text-white px-6 py-8">
-            <h2 className="font-bold font-primary text-lg mb-6">{LABELS.chefOfTheWeek}</h2>
+            <h2 className="text-h2 text-white mb-6">{LABELS.chefOfTheWeek}</h2>
 
             <div className="flex flex-col items-center mb-6">
                 <img
@@ -16,11 +16,11 @@ function ChefOfTheWeek() {
                     alt={chef.name}
                     className="w-full max-w-sm aspect-square object-cover mb-4"
                 />
-                <h3 className="font-bold font-primary text-xl mb-2">{chef.name}</h3>
-                <p className="font-primary text-sm leading-relaxed">{chef.bio}</p>
+                <h3 className="text-h3 text-white mb-2">{chef.name}</h3>
+                <p className="text-body text-white leading-relaxed">{chef.bio}</p>
             </div>
 
-            <h3 className="font-bold font-primary text-sm mb-4">
+            <h3 className="text-h3 text-white mb-4">
                 {LABELS.chefRestaurants(chef.name)}
             </h3>
             <CardCarousel>
@@ -33,7 +33,7 @@ function ChefOfTheWeek() {
                     />
                 ))}
             </CardCarousel>
-            <a href="/restaurants" className="flex items-center gap-1 mt-4 font-primary text-sm">
+            <a href="/restaurants" className="flex items-center gap-1 mt-4 text-body text-white">
                 {LABELS.allRestaurants} ≫
             </a>
         </section>

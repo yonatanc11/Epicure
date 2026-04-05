@@ -12,16 +12,16 @@ function Hero() {
       />
 
       <div className="absolute bottom-8 left-4 right-4 @[768px]:left-1/2 @[768px]:-translate-x-1/2 @[768px]:w-125 @[768px]:bottom-16">
-        <h1 className="text-2xl font-bold font-primary mb-4 @[768px]:text-3xl @[768px]:text-center">
+        <h1 className="text-h1 mb-4 @[768px]:text-3xl @[768px]:text-center">
           {LABELS.heroTitle}
         </h1>
 
         <div className="flex items-center bg-white/90 rounded-md px-4 py-3 gap-3">
-          <span className="text-gray">{ICONS.search}</span>
+          <img src={ICONS.search} alt="search" className="w-4 h-4" />
           <input
             type="text"
             placeholder={LABELS.searchPlaceholder}
-            className="w-full outline-none font-primary text-sm bg-transparent"
+            className="text-body w-full outline-none bg-transparent"
           />
         </div>
       </div>

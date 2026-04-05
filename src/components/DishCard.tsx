@@ -14,8 +14,8 @@ export default function DishCard({ image, name, ingredients, icon, price }: Dish
     return (
         <Card image={image} alt={name}>
             <div className="bg-secondary p-4">
-                <h3 className="font-bold font-primary">{name}</h3>
-                <p className="text-gray text-sm mt-1">{ingredients}</p>
+                <h3 className="text-h3">{name}</h3>
+                <p className="text-label mt-1">{ingredients}</p>
                 {icon && (
                     <img
                         src={`/icons/${icon}.svg`}
@@ -24,7 +24,7 @@ export default function DishCard({ image, name, ingredients, icon, price }: Dish
                     />
                 )}
                 <div className="mt-2 border-t border-gray pt-2">
-                    <span className="text-sm">{CURRENCY_SYMBOL}{price}</span>
+                    <span className="text-body">{CURRENCY_SYMBOL}{price}</span>
                 </div>
             </div>
         </Card>

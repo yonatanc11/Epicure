@@ -6,7 +6,7 @@ import { dishes } from '../data/dishes'
 export default function SignatureDishes() {
     return (
         <section className="px-6 py-8">
-            <h2 className="font-bold font-primary text-lg mb-4">{LABELS.signatureDishes}</h2>
+            <h2 className="text-h2 mb-4">{LABELS.signatureDishes}</h2>
             <CardCarousel>
                 {dishes.map((dish) => (
                     <DishCard
@@ -19,7 +19,7 @@ export default function SignatureDishes() {
                     />
                 ))}
             </CardCarousel>
-            <a href="/restaurants" className="flex items-center gap-1 mt-4 font-primary text-sm">
+            <a href="/restaurants" className="flex items-center gap-1 mt-4 text-body">
                 {LABELS.allRestaurants} ≫
             </a>
         </section>
