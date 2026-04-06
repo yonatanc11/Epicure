@@ -1,4 +1,4 @@
-import { NAV_LINKS } from '../constants/navigation'
+import { NAV_LINKS } from '../../constants/navigation'
 
 interface HamburgerMenuProps {
   onClose: () => void

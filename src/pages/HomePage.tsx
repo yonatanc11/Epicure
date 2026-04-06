@@ -1,5 +1,5 @@
-import Header from '../components/Header'
-import Hero from '../components/Hero'
+import Header from '../components/NavBarSection/NavBar'
+import Hero from '../components/HeroSection/Hero'
 import IconsMeaning from '../components/IconsMeaning'
 import PopularRestaurants from '../components/PopularRestaurants'
 import SignatureDishes from '../components/SignatureDishes'

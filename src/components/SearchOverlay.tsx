@@ -1,4 +1,4 @@
-import Overlay from './Overlay'
+import Overlay from './shared/Overlay'
 import { LABELS} from '../constants/strings'
 import { ICONS } from '../constants/icons'
 
