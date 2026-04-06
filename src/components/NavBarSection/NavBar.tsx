@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import { NAV_LINKS } from '../constants/navigation'
-import { LABELS } from '../constants/strings'
-import { ICONS } from '../constants/icons'
+import { NAV_LINKS } from '../../constants/navigation'
+import { LABELS } from '../../constants/strings'
+import { ICONS } from '../../constants/icons'
 import HamburgerMenu from './HamburgerMenu'
-import SearchOverlay from './SearchOverlay'
-import BagOverlay from './BagOverlay'
-import IconButton from './IconButton'
-import HeaderIcons from './HeaderIcons'
-import { useMobile } from '../hooks/useMobile'
+import SearchOverlay from '../SearchOverlay'
+import BagOverlay from '../BagOverlay'
+import IconButton from '../IconButton'
+import NavBarIcons from './NavBarIcons'
+import { useMobile } from '../../hooks/useMobile'
 
 type Overlay = 'menu' | 'search' | 'bag' | null
 
@@ -23,7 +23,7 @@ export default function Header() {
                 <div className="flex items-center justify-between px-6 py-4">
                     <IconButton icon={ICONS.hamburger} alt="menu" onClick={() => setOverlay('menu')} />
                     <img src={ICONS.logo} alt="Epicure logo" className="h-8" />
-                    <HeaderIcons onSearchClick={() => setOverlay('search')} onBagClick={() => setOverlay('bag')} />
+                    <NavBarIcons onSearchClick={() => setOverlay('search')} onBagClick={() => setOverlay('bag')} />
                 </div>
             ) : (
                 <div className="flex items-center justify-between px-10 py-4">
@@ -38,7 +38,7 @@ export default function Header() {
                             ))}
                         </nav>
                     </div>
-                    <HeaderIcons onSearchClick={() => setOverlay('search')} onBagClick={() => setOverlay('bag')} />
+                    <NavBarIcons onSearchClick={() => setOverlay('search')} onBagClick={() => setOverlay('bag')} />
                 </div>
             )}
 

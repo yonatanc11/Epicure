@@ -1,12 +1,12 @@
-import { ICONS } from '../constants/icons'
-import IconButton from './IconButton'
+import { ICONS } from '../../constants/icons'
+import IconButton from '../IconButton'
 
 interface HeaderIconsProps {
   onSearchClick: () => void
   onBagClick: () => void
 }
 
-function HeaderIcons({ onSearchClick, onBagClick }: HeaderIconsProps) {
+function NavBarIcons({ onSearchClick, onBagClick }: HeaderIconsProps) {
   return (
     <div className="flex items-center gap-4">
       <IconButton icon={ICONS.search} alt="search" onClick={onSearchClick} />
@@ -16,4 +16,4 @@ function HeaderIcons({ onSearchClick, onBagClick }: HeaderIconsProps) {
   )
 }
 
-export default HeaderIcons
+export default NavBarIcons

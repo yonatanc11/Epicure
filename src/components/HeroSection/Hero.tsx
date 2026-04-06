@@ -1,5 +1,5 @@
-import { LABELS} from '../constants/strings'
-import { ICONS } from '../constants/icons'
+import { LABELS} from '../../constants/strings'
+import { ICONS } from '../../constants/icons'
 import heroImg from '../assets/images/heroPicture.png'
 
 export default function Hero() {

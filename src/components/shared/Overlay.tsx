@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { ICONS } from '../constants/icons'  
+import { ICONS } from '../../constants/icons'  
 
 interface OverlayProps {
     onClose: () => void

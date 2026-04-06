@@ -1,4 +1,4 @@
-import Card from "./Card"
+import Card from "./shared/Card"
 import { CURRENCY_SYMBOL } from '../constants/strings'
 import type { IconType } from '../constants/strings'
 import { ICONS } from '../constants/icons'
