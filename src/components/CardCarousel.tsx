@@ -1,9 +1,9 @@
-import type { ReactNode } from 'react'
+import { Children, type ReactNode } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper-bundle.css'
 
 interface CardCarouselProps {
-    children: ReactNode[]
+    children: ReactNode
     slidesPerView?: number
 }
 
@@ -14,7 +14,7 @@ export default function CardCarousel({ children, slidesPerView = 2 }: CardCarous
             slidesPerView={slidesPerView}
             grabCursor={true}
         >
-            {children.map((child, index) => (
+            {Children.map(children, (child, index) => (
                 <SwiperSlide key={index}>
                     {child}
                 </SwiperSlide>

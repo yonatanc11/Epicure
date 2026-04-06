@@ -1,6 +1,7 @@
 import { LABELS } from '../constants/strings'
 import CardCarousel from './CardCarousel'
 import RestaurantCard from './RestaurantCard'
+import ChefProfile from './ChefProfile'
 import { chefs } from '../data/chefs'
 
 const chef = chefs[0]
@@ -10,15 +11,7 @@ function ChefOfTheWeek() {
         <section className="bg-primary text-white px-6 py-8">
             <h2 className="text-h2 text-white mb-6">{LABELS.chefOfTheWeek}</h2>
 
-            <div className="flex flex-col items-center mb-6">
-                <img
-                    src={chef.image}
-                    alt={chef.name}
-                    className="w-full max-w-sm aspect-square object-cover mb-4"
-                />
-                <h3 className="text-h3 text-white mb-2">{chef.name}</h3>
-                <p className="text-body text-white leading-relaxed">{chef.bio}</p>
-            </div>
+            <ChefProfile chef={chef} />
 
             <h3 className="text-h3 text-white mb-4">
                 {LABELS.chefRestaurants(chef.name)}

@@ -8,10 +8,10 @@ function AboutSection() {
       <span className="text-label tracking-widest mb-6">{LABELS.brandName}</span>
 
       <div className="flex flex-col gap-3 w-full max-w-xs mb-8">
-        <a href="#" className="flex items-center justify-center gap-2 border border-primary rounded-md px-4 py-3 text-btn">
+        <a className="flex items-center justify-center gap-2 border border-primary rounded-md px-4 py-3 text-btn">
           ▶ {LABELS.getItOn} {LABELS.googlePlay}
         </a>
-        <a href="#" className="flex items-center justify-center gap-2 border border-primary rounded-md px-4 py-3 text-btn">
+        <a className="flex items-center justify-center gap-2 border border-primary rounded-md px-4 py-3 text-btn">
           {LABELS.downloadOnThe} {LABELS.appStore}
         </a>
       </div>

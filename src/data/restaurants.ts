@@ -11,37 +11,37 @@ import yapanImg from '../assets/images/restaurants/Yapan.png'
 
 export const restaurants: Restaurant[] = [
   {
-    id: 'claro',
+    id: crypto.randomUUID(),
     name: 'Claro',
     chef: 'Ran Shmueli',
     image: claroImg,
   },
   {
-    id: 'tiger-lily',
+    id: crypto.randomUUID(),
     name: 'Tiger Lily',
     chef: 'Yanir Green',
     image: tigerLilyImg,
   },
   {
-    id: 'nithan-thai',
+    id: crypto.randomUUID(),
     name: 'Nithan Thai',
     chef: 'Ariel Leventhal',
     image: nithanThaiImg,
   },
   {
-    id: 'kab-kem',
+    id: crypto.randomUUID(),
     name: 'Kab Kem',
     chef: 'Meir Adoni',
     image: kabKemImg,
   },
   {
-    id: 'messa',
+    id: crypto.randomUUID(),
     name: 'Messa',
     chef: 'Aviv Moshe',
     image: messaImg,
   },
   {
-    id: 'yapan',
+    id: crypto.randomUUID(),
     name: 'Yapan',
     chef: 'Yuval Ben Neriah',
     image: yapanImg,

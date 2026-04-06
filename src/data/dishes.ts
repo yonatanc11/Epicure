@@ -5,7 +5,7 @@ import smokedPizzaImg from '../assets/images/dishes/Smoked Pizza.png'
 
 export const dishes: Dish[] = [
   {
-    id: 'pad-ki-mao',
+    id: crypto.randomUUID(),
     name: 'Pad Ki Mao',
     ingredients: 'Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, Magic Chili Brown Coconut',
     icon: 'spicy',
@@ -14,7 +14,7 @@ export const dishes: Dish[] = [
     image: padKiMaoImg,
   },
   {
-    id: 'garbanzo',
+    id: crypto.randomUUID(),
     name: 'Garbanzo Frito',
     ingredients: 'Polenta fingers, magic chili cream, verde',
     price: 78,
@@ -22,7 +22,7 @@ export const dishes: Dish[] = [
     image: garbanzoFritoImg,
   },
   {
-    id: 'smoked-pizza',
+    id: crypto.randomUUID(),
     name: 'Smoked Pizza',
     ingredients: 'Trout fillet, lemon butter, capers, herbs',
     icon: 'vegetarian',

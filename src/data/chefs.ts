@@ -19,19 +19,19 @@ import yuvalBenNeriaImg from '../assets/images/chefs/Yuval_Ben_Neria.png'
 
 export const chefs: Chef[] = [
   {
-    id: 'yossi-shitrit',
+    id: crypto.randomUUID(),
     name: 'Yossi Shitrit',
     bio: 'Chef Yossi Shitrit has been living and breathing his culinary dreams for more than two decades, including running the kitchen at his first restaurant, the fondly-remembered Violet, located in Moshav Udim. Shitrit\'s creativity and culinary acumen born of long experience are expressed in every detail of each and every dish.',
     image: yossiShitritImg,
     restaurants: [
       {
-        id: 'onza',
+        id: crypto.randomUUID(),
         name: 'Onza',
         chef: 'Yossi Shitrit',
         image: claroImg,
       },
       {
-        id: 'kitchen',
+        id: crypto.randomUUID(),
         name: 'Kitchen',
         chef: 'Yossi Shitrit',
         image: kabKemImg,
@@ -39,19 +39,19 @@ export const chefs: Chef[] = [
     ],
   },
   {
-    id: 'aviv-moshe',
+    id: crypto.randomUUID(),
     name: 'Aviv Moshe',
     bio: 'Aviv Moshe is the head chef of Messa, one of Tel Aviv\'s most celebrated fine-dining destinations. His cuisine masterfully blends classical French technique with bold Middle Eastern flavors, creating a uniquely Israeli fine-dining experience.',
     image: avivMosheImg,
     restaurants: [
       {
-        id: 'messa',
+        id: crypto.randomUUID(),
         name: 'Messa',
         chef: 'Aviv Moshe',
         image: messaImg,
       },
       {
-        id: 'messa-2',
+        id: crypto.randomUUID(),
         name: 'Messa',
         chef: 'Aviv Moshe',
         image: messa2Img,
@@ -59,13 +59,13 @@ export const chefs: Chef[] = [
     ],
   },
   {
-    id: 'eyal-shani',
+    id: crypto.randomUUID(),
     name: 'Eyal Shani',
     bio: 'One of Israel\'s most influential and unconventional chefs, Eyal Shani is celebrated for his ingredient-driven philosophy and theatrical dining experiences. He is the creative force behind Miznon and HaSalon, with outposts spanning Tel Aviv, Paris, New York, and beyond.',
     image: eyalShaniImg,
     restaurants: [
       {
-        id: 'FILL IN',
+        id: crypto.randomUUID(),
         name: 'FILL IN',
         chef: 'Eyal Shani',
         image: tigerLilyImg,
@@ -73,19 +73,19 @@ export const chefs: Chef[] = [
     ],
   },
   {
-    id: 'meir-adoni',
+    id: crypto.randomUUID(),
     name: 'Meir Adoni',
     bio: 'Meir Adoni is a celebrated Israeli chef and restaurateur renowned for his creative fusion of Mediterranean and Middle Eastern cuisines. With a career spanning acclaimed restaurants across Tel Aviv and New York, he helms Kab Kem among other lauded establishments.',
     image: meirAdoniImg,
     restaurants: [
       {
-        id: 'kab-kem',
+        id: crypto.randomUUID(),
         name: 'Kab Kem',
         chef: 'Meir Adoni',
         image: kabKemImg,
       },
       {
-        id: 'kab-kem-2',
+        id: crypto.randomUUID(),
         name: 'Kab Kem',
         chef: 'Meir Adoni',
         image: kabKem2Img,
@@ -93,13 +93,13 @@ export const chefs: Chef[] = [
     ],
   },
   {
-    id: 'nitzan-raz',
+    id: crypto.randomUUID(),
     name: 'Nitzan Raz',
     bio: 'Chef Nitzan Raz is known for her contemporary Israeli cuisine that draws deep inspiration from local seasonal produce and traditional Levantine recipes, elevating humble ingredients into refined, memorable dishes.',
     image: nitzanRazImg,
     restaurants: [
       {
-        id: 'FILL IN',
+        id: crypto.randomUUID(),
         name: 'FILL IN',
         chef: 'Nitzan Raz',
         image: claroImg,
@@ -107,13 +107,13 @@ export const chefs: Chef[] = [
     ],
   },
   {
-    id: 'omer-miller',
+    id: crypto.randomUUID(),
     name: 'Omer Miller',
     bio: 'Omer Miller is an acclaimed Israeli chef celebrated for his refined and produce-led approach to cooking. He has earned a loyal following through seasonal menus that highlight the best of Israeli agriculture and local craftsmanship.',
     image: omerMillerImg,
     restaurants: [
       {
-        id: 'FILL IN',
+        id: crypto.randomUUID(),
         name: 'FILL IN',
         chef: 'Omer Miller',
         image: claroImg,
@@ -121,13 +121,13 @@ export const chefs: Chef[] = [
     ],
   },
   {
-    id: 'shahaf-shabtai',
+    id: crypto.randomUUID(),
     name: 'Shahaf Shabtai',
     bio: 'Shahaf Shabtai is a talented Israeli chef known for his inventive dishes that bridge culinary tradition and modern creativity, bringing a fresh perspective to Israeli dining through bold flavor combinations and meticulous technique.',
     image: shahafShabtaiImg,
     restaurants: [
       {
-        id: 'FILL IN',
+        id: crypto.randomUUID(),
         name: 'FILL IN',
         chef: 'Shahaf Shabtai',
         image: claroImg,
@@ -135,13 +135,13 @@ export const chefs: Chef[] = [
     ],
   },
   {
-    id: 'yuval-ben-neriah',
+    id: crypto.randomUUID(),
     name: 'Yuval Ben Neriah',
     bio: 'Yuval Ben Neriah is the visionary chef behind Yapan, bringing a refined Japanese-Israeli culinary fusion to Tel Aviv. His mastery of Japanese technique combined with local Israeli ingredients has made Yapan one of the city\'s most sought-after dining destinations.',
     image: yuvalBenNeriaImg,
     restaurants: [
       {
-        id: 'yapan',
+        id: crypto.randomUUID(),
         name: 'Yapan',
         chef: 'Yuval Ben Neriah',
         image: yapanImg,
@@ -149,14 +149,13 @@ export const chefs: Chef[] = [
     ],
   },
   {
-    
-    id: 'asaf-granit',
+    id: crypto.randomUUID(),
     name: 'Asaf Granit',
     bio: 'Born and raised in Jerusalem, Asaf Granit trained at some of the world\'s top kitchens before opening the iconic Machneyuda restaurant in Jerusalem\'s Mahane Yehuda market. His bold, market-driven cooking has earned him international acclaim and a dedicated following.',
     image: asafGranitImg,
     restaurants: [
       {
-        id: 'FILL IN',
+        id: crypto.randomUUID(),
         name: 'FILL IN',
         chef: 'Asaf Granit',
         image: claroImg,
