@@ -1,25 +1,28 @@
-import { LABELS} from '../../constants/strings'
+import { LABELS } from '../../constants/strings'
 import { ICONS } from '../../constants/icons'
-import heroImg from '../assets/images/heroPicture.png'
+import { useMobile } from '../../hooks/useMobile'
+import heroImg from '../../assets/images/heroPicture.png'
 
 export default function Hero() {
+  const isMobile = useMobile()
+
   return (
     <section className="relative">
       <img
         src={heroImg}
         alt="Epicure hero"
-        className="w-full h-80 object-cover @[768px]:h-125"
+        className={`w-full object-cover ${isMobile ? 'h-80' : 'h-125'}`}
       />
 
-      <div className="absolute bottom-8 left-4 right-4 @[768px]:left-1/2 @[768px]:-translate-x-1/2 @[768px]:w-125 @[768px]:bottom-16">
-        <div className="bg-white/88 rounded-md px-6 py-9 flex flex-col gap-4.5">
-          <h1 className="text-h1">{LABELS.heroTitle}</h1>
-          <div className="flex items-center gap-3 border border-primary rounded-md px-4 py-3">
-            <img src={ICONS.search} alt="search" className="w-5 h-5 opacity-40" />
+      <div className={`absolute inset-0 flex items-center justify-center ${isMobile ? 'px-4' : 'px-[20%]'}`}>
+        <div className={`bg-white/88 rounded-md w-full px-[5%] py-[3%] flex flex-col items-center gap-[3%] ${isMobile ? 'max-w-xl' : 'max-w-2xl'}`}>
+          <h1 className={`${isMobile ? 'text-h1' : 'desktop-text-h1'} text-center`}>{LABELS.heroTitle}</h1>
+          <div className="flex items-center gap-3 border border-primary rounded-md px-4 py-2 w-full">
+            <img src={ICONS.search} alt="search" className="w-5 h-5" />
             <input
               type="text"
               placeholder={LABELS.searchPlaceholder}
-              className="text-h3 w-full outline-none bg-transparent placeholder:text-gray"
+              className={`w-full ${isMobile ? 'text-body' : 'desktop-text-body'}`}
             />
           </div>
         </div>

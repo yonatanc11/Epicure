@@ -29,12 +29,14 @@ export const chefs: Chef[] = [
         name: 'Onza',
         chef: 'Yossi Shitrit',
         image: claroImg,
+
       },
       {
         id: crypto.randomUUID(),
         name: 'Kitchen',
         chef: 'Yossi Shitrit',
         image: kabKemImg,
+
       },
     ],
   },
@@ -49,6 +51,7 @@ export const chefs: Chef[] = [
         name: 'Messa',
         chef: 'Aviv Moshe',
         image: messaImg,
+
       },
       {
         id: crypto.randomUUID(),
@@ -83,6 +86,7 @@ export const chefs: Chef[] = [
         name: 'Kab Kem',
         chef: 'Meir Adoni',
         image: kabKemImg,
+
       },
       {
         id: crypto.randomUUID(),
@@ -103,6 +107,7 @@ export const chefs: Chef[] = [
         name: 'FILL IN',
         chef: 'Nitzan Raz',
         image: claroImg,
+
       },
     ],
   },
@@ -117,6 +122,7 @@ export const chefs: Chef[] = [
         name: 'FILL IN',
         chef: 'Omer Miller',
         image: claroImg,
+
       },
     ],
   },
@@ -131,6 +137,7 @@ export const chefs: Chef[] = [
         name: 'FILL IN',
         chef: 'Shahaf Shabtai',
         image: claroImg,
+
       },
     ],
   },
@@ -159,6 +166,7 @@ export const chefs: Chef[] = [
         name: 'FILL IN',
         chef: 'Asaf Granit',
         image: claroImg,
+
       },
     ],
   },

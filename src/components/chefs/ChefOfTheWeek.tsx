@@ -1,8 +1,8 @@
-import { LABELS } from '../constants/strings'
-import CardCarousel from './CardCarousel'
-import RestaurantCard from './RestaurantCard'
+import { LABELS } from '../../constants/strings'
+import CardCarousel from '../CardCarousel'
+import RestaurantCard from '../RestaurantCard'
 import ChefProfile from './ChefProfile'
-import { chefs } from '../data/chefs'
+import { chefs } from '../../data/chefs'
 
 const chef = chefs[0]
 

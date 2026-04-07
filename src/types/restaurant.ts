@@ -3,4 +3,5 @@ export interface Restaurant {
   name: string
   chef: string
   image: string
+  rating?: number
 }

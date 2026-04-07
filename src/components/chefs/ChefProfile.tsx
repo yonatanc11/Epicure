@@ -1,4 +1,4 @@
-import type { Chef } from '../types/chef'
+import type { Chef } from '../../types/chef'
 
 interface ChefProfileProps {
   chef: Chef

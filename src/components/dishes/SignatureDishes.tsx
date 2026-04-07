@@ -1,7 +1,7 @@
-import { LABELS } from '../constants/strings'
-import CardCarousel from './CardCarousel'
+import { LABELS } from '../../constants/strings'
+import CardCarousel from '../CardCarousel'
 import DishCard from './DishCard'
-import { dishes } from '../data/dishes'
+import { dishes } from '../../data/dishes'
 
 export default function SignatureDishes() {
     return (
