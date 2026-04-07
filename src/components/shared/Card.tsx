@@ -8,7 +8,7 @@ interface CardProps {
 
 export default function Card({ image, alt, children }: CardProps) {
     return (
-        <div className="overflow-hidden">
+        <div className="overflow-hidden h-full flex flex-col">
             <img
                 src={image}
                 alt={alt}

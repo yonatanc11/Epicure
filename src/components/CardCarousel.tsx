@@ -18,7 +18,7 @@ export default function CardCarousel({ children, slidesPerView = { mobile: 2, de
             grabCursor={true}
         >
             {Children.map(children, (child, index) => (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} style={{ height: 'auto' }}>
                     {child}
                 </SwiperSlide>
             ))}

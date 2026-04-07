@@ -17,17 +17,23 @@ export default function DishCard({ image, name, ingredients, icon, price }: Dish
 
     return (
         <Card image={image} alt={name}>
-            <div className="bg-secondary px-4 pt-3 pb-4 text-center flex flex-col items-center">
+            <div className={`bg-secondary px-4 pt-3 pb-4 flex flex-col flex-1 ${isMobile ? 'items-start text-left' : 'items-center text-center'}`}>
                 <h3 className={isMobile ? 'text-h3' : 'desktop-text-h3'}>{name}</h3>
-                <p className={`${isMobile ? 'text-label' : 'desktop-text-label'} mt-1 leading-snug`}>{ingredients}</p>
-                {icon && (
+                {!isMobile && icon && (
                     <img
                         src={ICONS[`${icon}Small` as keyof typeof ICONS]}
                         alt={icon}
-                        className="w-5 h-5 mt-3"
+                        
                     />
                 )}
-                <div className="mt-3 border-t border-gray/40 pt-3 w-full">
+                <p className={`${isMobile ? 'text-body' : 'desktop-text-body'} mt-1 leading-snug`}>{ingredients}</p>
+                {isMobile && icon && (
+                    <img
+                        src={ICONS[`${icon}Small` as keyof typeof ICONS]}
+                        alt={icon}
+                    />
+                )}
+                <div className={`mt-auto pt-3 w-full ${isMobile ? '' : 'border-t border-gray/40'}`}>
                     <span className={isMobile ? 'text-body' : 'desktop-text-body'}>{CURRENCY_SYMBOL}{price}</span>
                 </div>
             </div>

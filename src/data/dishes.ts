@@ -16,7 +16,8 @@ export const dishes: Dish[] = [
   {
     id: crypto.randomUUID(),
     name: 'Garbanzo Frito',
-    ingredients: 'Polenta fingers, magic chili cream, verde',
+    ingredients: 'Polenta fingers, veal cheek, magic chili cured lemon cream, yellow laksa',
+     icon: 'spicy',
     price: 78,
     restaurant: 'Lumia',
     image: garbanzoFritoImg,
