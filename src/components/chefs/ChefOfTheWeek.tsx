@@ -12,6 +12,7 @@ function ChefOfTheWeek() {
 
     return (
         <section className="px-6 py-8 bg-white text-primary">
+            <div className="max-w-5xl mx-auto w-full">
             <h2 className={`mb-6 ${isMobile ? 'text-h2' : 'desktop-text-h2 text-center'}`}>{LABELS.chefOfTheWeek}</h2>
 
             <ChefProfile chef={chef} />
@@ -32,6 +33,7 @@ function ChefOfTheWeek() {
             <a href="/restaurants" className={`flex items-center gap-1 mt-4 text-body ${isMobile ? 'justify-start' : 'justify-end'}`}>
                 {LABELS.allRestaurants} ≫
             </a>
+            </div>
         </section>
     )
 }

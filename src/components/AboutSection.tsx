@@ -4,6 +4,7 @@ import { ICONS } from '../constants/icons'
 function AboutSection() {
   return (
     <section className="px-6 py-8 flex flex-col items-center">
+      <div className="max-w-5xl mx-auto w-full flex flex-col items-center">
       <img src={ICONS.logo} alt="Epicure logo" className="h-12 mb-2" />
       <span className="text-label tracking-widest mb-6">{LABELS.brandName}</span>
 
@@ -21,6 +22,7 @@ function AboutSection() {
         <p className="text-body text-gray leading-relaxed">
           {LABELS.aboutUsDescription}
         </p>
+      </div>
       </div>
     </section>
   )
