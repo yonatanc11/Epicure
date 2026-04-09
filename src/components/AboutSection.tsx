@@ -6,7 +6,7 @@ function AboutSection() {
   const isMobile = useMobile()
 
   return (
-    <section className="px-6 py-8 flex flex-col items-center">
+    <section className="px-6 py-8 flex flex-col items-center bg-bg">
       <div className={`max-w-5xl mx-auto w-full flex ${isMobile ? 'flex-col items-center' : 'flex-row items-start justify-between gap-12'}`}>
         <div className="flex-1 max-w-xl">
           <h3 className="text-h1 mb-4">{LABELS.aboutUs}</h3>
