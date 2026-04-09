@@ -10,13 +10,14 @@ interface DishCardProps {
     ingredients: string
     icon?: IconType
     price: number
+    imageClass?: string
 }
 
-export default function DishCard({ image, name, ingredients, icon, price }: DishCardProps) {
+export default function DishCard({ image, name, ingredients, icon, price, imageClass }: DishCardProps) {
     const isMobile = useMobile()
 
     return (
-        <Card image={image} alt={name}>
+        <Card image={image} alt={name} imageClass={imageClass}>
             <div className={`bg-secondary px-4 pt-3 pb-4 flex flex-col flex-1 ${isMobile ? 'items-start text-left' : 'items-center text-center'}`}>
                 <h3 className={isMobile ? 'text-h3' : 'desktop-text-h3'}>{name}</h3>
                 {!isMobile && icon && (

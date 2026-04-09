@@ -20,6 +20,7 @@ export default function SignatureDishes() {
                         ingredients={dish.ingredients}
                         icon={dish.icon}
                         price={dish.price}
+                        imageClass={isMobile ? 'aspect-video' : 'aspect-square'}
                     />
                 ))}
             </CardCarousel>

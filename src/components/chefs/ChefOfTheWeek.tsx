@@ -28,6 +28,7 @@ function ChefOfTheWeek() {
                         name={restaurant.name}
                         chef=""
                         imageClass={isMobile ? 'aspect-video' : 'aspect-square'}
+                        titleClass="text-[30px] font-normal leading-[47px] tracking-[2.67px] text-black"
                     />
                 ))}
             </CardCarousel>
