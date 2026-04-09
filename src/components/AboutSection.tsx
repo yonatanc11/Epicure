@@ -1,28 +1,34 @@
 import { LABELS } from '../constants/strings'
 import { ICONS } from '../constants/icons'
+import { useMobile } from '../hooks/useMobile'
 
 function AboutSection() {
+  const isMobile = useMobile()
+
   return (
     <section className="px-6 py-8 flex flex-col items-center">
-      <div className="max-w-5xl mx-auto w-full flex flex-col items-center">
-      <img src={ICONS.logo} alt="Epicure logo" className="h-12 mb-2" />
-      <span className="text-label tracking-widest mb-6">{LABELS.brandName}</span>
+      <div className={`max-w-5xl mx-auto w-full flex ${isMobile ? 'flex-col items-center' : 'flex-row items-start justify-between gap-12'}`}>
+        <div className="flex-1 max-w-xl">
+          <h3 className="text-h1 mb-4">{LABELS.aboutUs}</h3>
+          <p className="text-body text-gray leading-relaxed mb-6">
+            {LABELS.aboutUsDescription}
+          </p>
 
-      <div className="flex flex-col gap-3 w-full max-w-xs mb-8">
-        <a className="flex items-center justify-center gap-2 border border-primary rounded-md px-4 py-3 text-btn">
-          ▶ {LABELS.getItOn} {LABELS.googlePlay}
-        </a>
-        <a className="flex items-center justify-center gap-2 border border-primary rounded-md px-4 py-3 text-btn">
-          {LABELS.downloadOnThe} {LABELS.appStore}
-        </a>
-      </div>
+          <div className={`flex gap-3 ${isMobile ? 'flex-col items-center' : 'flex-row items-start'}`}>
+            <button>
+              <img src={ICONS.apple} alt="Download on the App Store" />
+            </button>
+            <button>
+              <img src={ICONS.google} alt="Get it on Google Play" />
+            </button>
+          </div>
+        </div>
 
-      <div className="w-full">
-        <h3 className="text-h1 mb-4">{LABELS.aboutUs}</h3>
-        <p className="text-body text-gray leading-relaxed">
-          {LABELS.aboutUsDescription}
-        </p>
-      </div>
+        {!isMobile && (
+          <div className="shrink-0 flex items-center justify-center pl-8">
+            <img src={ICONS.logoBig} alt="Epicure logo" className="w-50 lg:w-62.5" />
+          </div>
+        )}
       </div>
     </section>
   )
