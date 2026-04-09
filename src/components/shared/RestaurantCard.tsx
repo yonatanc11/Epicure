@@ -1,6 +1,6 @@
-import Card from './shared/Card'
-import StarRating from './shared/StarRating'
-import { useMobile } from '../hooks/useMobile'
+import Card from './Card'
+import StarRating from './StarRating'
+import { useMobile } from '../../hooks/useMobile'
 
 interface RestaurantCardProps {
   image: string

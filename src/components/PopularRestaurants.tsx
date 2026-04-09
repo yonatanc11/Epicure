@@ -1,6 +1,6 @@
 import { LABELS } from '../constants/strings'
 import CardCarousel from './CardCarousel'
-import RestaurantCard from './RestaurantCard'
+import RestaurantCard from './shared/RestaurantCard'
 import { restaurants } from '../data/restaurants'
 import { useMobile } from '../hooks/useMobile'
 
