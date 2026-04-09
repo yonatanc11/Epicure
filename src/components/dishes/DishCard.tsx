@@ -33,8 +33,14 @@ export default function DishCard({ image, name, ingredients, icon, price }: Dish
                         alt={icon}
                     />
                 )}
-                <div className={`mt-auto pt-3 w-full ${isMobile ? '' : 'border-t border-gray/40'}`}>
-                    <span className={isMobile ? 'text-body' : 'desktop-text-body'}>{CURRENCY_SYMBOL}{price}</span>
+                <div className={`mt-auto pt-4 w-full ${isMobile ? '' : 'flex items-center gap-4'}`}>
+                    {!isMobile && <div className="flex-1 border-t border-gray/40"></div>}
+
+                    <span className={isMobile ? 'text-body' : 'desktop-text-body'}>
+                        {CURRENCY_SYMBOL}{price}
+                    </span>
+
+                    {!isMobile && <div className="flex-1 border-t border-gray/40"></div>}
                 </div>
             </div>
         </Card>

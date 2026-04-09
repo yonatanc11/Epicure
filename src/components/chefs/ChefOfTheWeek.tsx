@@ -17,16 +17,17 @@ function ChefOfTheWeek() {
 
             <ChefProfile chef={chef} />
 
-            <h3 className={`mb-4 ${isMobile ? 'text-h3' : 'desktop-text-h2'}`}>
+            <h3 className={`mb-4 ${isMobile ? 'text-h3' : 'desktop-text-h2 text-left'}`}>
                 {LABELS.chefRestaurants(chef.name)}
             </h3>
-            <CardCarousel>
+            <CardCarousel slidesPerView={{ mobile: 2, desktop: 5 }}>
                 {chef.restaurants.map((restaurant) => (
                     <RestaurantCard
                         key={restaurant.id}
                         image={restaurant.image}
                         name={restaurant.name}
                         chef=""
+                        imageClass={isMobile ? 'aspect-video' : 'aspect-square'}
                     />
                 ))}
             </CardCarousel>
