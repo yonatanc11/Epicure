@@ -8,7 +8,7 @@ interface CardCarouselProps {
     slidesPerView?: { mobile: number; desktop: number }
 }
 
-export default function CardCarousel({ children, slidesPerView = { mobile: 2, desktop: 3 } }: CardCarouselProps) {
+export default function CardCarousel({ children, slidesPerView = { mobile: 1.5, desktop: 3 } }: CardCarouselProps) {
     const isMobile = useMobile()
 
     return (
