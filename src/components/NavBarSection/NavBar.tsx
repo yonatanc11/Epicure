@@ -3,8 +3,8 @@ import { NAV_LINKS } from '../../constants/navigation'
 import { LABELS } from '../../constants/strings'
 import { ICONS } from '../../constants/icons'
 import HamburgerMenu from './HamburgerMenu'
-import SearchOverlay from '../SearchOverlay'
-import BagOverlay from '../BagOverlay'
+import SearchOverlay from './SearchOverlay'
+import BagOverlay from './BagOverlay'
 import IconButton from '../IconButton'
 import NavBarIcons from './NavBarIcons'
 import { useMobile } from '../../hooks/useMobile'
@@ -16,6 +16,8 @@ export default function Header() {
     const isMobile = useMobile()
 
     const closeOverlay = () => setOverlay(null)
+    const toggleBag = () => setOverlay(overlay === 'bag' ? null : 'bag')
+    const toggleSearch = () => setOverlay(overlay === 'search' ? null : 'search')
 
     return (
         <header className="relative">
@@ -23,7 +25,7 @@ export default function Header() {
                 <div className="flex items-center justify-between px-6 py-4">
                     <IconButton icon={ICONS.hamburger} alt="menu" onClick={() => setOverlay('menu')} />
                     <img src={ICONS.logo} alt="Epicure logo" className="h-8" />
-                    <NavBarIcons onSearchClick={() => setOverlay('search')} onBagClick={() => setOverlay('bag')} />
+                    <NavBarIcons onSearchClick={toggleSearch} onBagClick={toggleBag} />
                 </div>
             ) : (
                 <div className="flex items-center justify-between px-10 py-4">
@@ -38,7 +40,7 @@ export default function Header() {
                             ))}
                         </nav>
                     </div>
-                    <NavBarIcons onSearchClick={() => setOverlay('search')} onBagClick={() => setOverlay('bag')} />
+                    <NavBarIcons onSearchClick={toggleSearch} onBagClick={toggleBag} />
                 </div>
             )}
 

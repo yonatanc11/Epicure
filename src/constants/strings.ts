@@ -14,6 +14,7 @@ export const LABELS = {
     chefs: 'Chefs',
     searchPlaceholder: 'Search for restaurant, cuisine, chef',
     emptyBag: 'YOUR BAG IS EMPTY',
+    orderHistory: 'ORDER HISTORY',
     heroTitle: 'Epicure works with the top chef restaurants in Tel Aviv',
     getItOn: 'Get it on',
     googlePlay: 'Google Play',
