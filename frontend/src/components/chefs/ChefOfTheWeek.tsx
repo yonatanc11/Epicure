@@ -1,14 +1,21 @@
+import { useEffect, useState } from 'react'
+import type { ChefDTO } from '@epicure/shared'
 import { LABELS } from '../../constants/strings'
 import CardCarousel from '../CardCarousel'
 import RestaurantCard from '../shared/RestaurantCard'
 import ChefProfile from './ChefProfile'
-import { chefs } from '../../data/chefs'
+import { api } from '../../api/client'
 import { useMobile } from '../../hooks/useMobile'
-
-const chef = chefs[0]
 
 function ChefOfTheWeek() {
     const isMobile = useMobile()
+    const [chef, setChef] = useState<ChefDTO | null>(null)
+
+    useEffect(() => {
+        api.chefs.list().then((chefs) => setChef(chefs[0] ?? null)).catch(console.error)
+    }, [])
+
+    if (!chef) return null
 
     return (
         <section className="px-6 py-8 bg-white text-primary">

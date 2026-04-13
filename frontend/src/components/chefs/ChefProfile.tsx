@@ -1,4 +1,4 @@
-import type { Chef } from '../../types/chef'
+import type { Chef } from '@epicure/shared'
 import { useMobile } from '../../hooks/useMobile'
 
 interface ChefProfileProps {

@@ -1,12 +1,19 @@
+import { useEffect, useState } from 'react'
+import type { RestaurantDTO } from '@epicure/shared'
 import { LABELS } from '../constants/strings'
 import CardCarousel from './CardCarousel'
 import RestaurantCard from './shared/RestaurantCard'
-import { restaurants } from '../data/restaurants'
+import { api } from '../api/client'
 import { useMobile } from '../hooks/useMobile'
 
 
 export default function PopularRestaurants() {
   const isMobile = useMobile()
+  const [restaurants, setRestaurants] = useState<RestaurantDTO[]>([])
+
+  useEffect(() => {
+    api.restaurants.list().then(setRestaurants).catch(console.error)
+  }, [])
 
   return (
     <section className="px-6 py-8">
