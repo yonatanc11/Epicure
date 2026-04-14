@@ -1,11 +1,14 @@
-import type { RestaurantDTO } from '../restaurants/restaurant.dto'
-
 export interface ChefDTO {
   id: string
   name: string
-  bio: string
   image: string
-  restaurants: RestaurantDTO[]
+  description?: string
 }
 
 export type Chef = ChefDTO
+
+export class CreateChefDto {
+  name: string
+  image: string
+  description?: string
+}
