@@ -2,13 +2,7 @@ export interface ChefDTO {
   id: string
   name: string
   image: string
-  description?: string
+  bio?: string
 }
 
 export type Chef = ChefDTO
-
-export class CreateChefDto {
-  name: string
-  image: string
-  description?: string
-}

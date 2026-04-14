@@ -1,11 +1,11 @@
-import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
 import { ChefsService } from './chef.service';
-import { CreateChefDto } from './chef.dto';
+import { CreateChefDto, UpdateChefDto } from './chef.input';
 
-@Controller('api/chefs') 
+@Controller('api/chefs')
 export class ChefsController {
-  
-  constructor(private readonly chefsService: ChefsService) {}
+
+  constructor(private readonly chefsService: ChefsService) { }
 
   @Get()
   async getAll() {
@@ -20,6 +20,11 @@ export class ChefsController {
   @Post()
   async create(@Body() dto: CreateChefDto) {
     return this.chefsService.create(dto);
+  }
+
+  @Patch(':id')
+  async update(@Param('id') id: string, @Body() dto: UpdateChefDto) {
+    return this.chefsService.update(id, dto);
   }
 
   @Delete(':id')
