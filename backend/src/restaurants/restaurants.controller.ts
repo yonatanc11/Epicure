@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express'
-import { RestaurantModel } from '../models/restaurant.model'
-import { ChefModel } from '../models/chef.model'
+import { RestaurantModel } from './restaurant.model'
+import { ChefModel } from '../chefs/chef.model'
 import { toRestaurantDTO } from '../mappers'
 
 export async function list(_req: Request, res: Response) {

@@ -2,9 +2,9 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import { connectDB } from './config/db'
-import { chefsRouter } from './routes/chefs.routes'
-import { restaurantsRouter } from './routes/restaurants.routes'
-import { dishesRouter } from './routes/dishes.routes'
+import { chefsRouter } from './chefs/chefs.routes'
+import { restaurantsRouter } from './restaurants/restaurants.routes'
+import { dishesRouter } from './dishes/dishes.routes'
 
 dotenv.config()
 

@@ -1,4 +1,4 @@
-import type { RestaurantDTO } from './restaurant.dto'
+import type { RestaurantDTO } from '../restaurants/restaurant.dto'
 
 export interface ChefDTO {
   id: string

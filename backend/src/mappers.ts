@@ -1,8 +1,8 @@
 import type { ChefDTO, RestaurantDTO, DishDTO } from '@epicure/shared'
 import type { HydratedDocument } from 'mongoose'
-import type { ChefDoc } from './models/chef.model'
-import type { RestaurantDoc } from './models/restaurant.model'
-import type { DishDoc } from './models/dish.model'
+import type { ChefDoc } from './chefs/chef.model'
+import type { RestaurantDoc } from './restaurants/restaurant.model'
+import type { DishDoc } from './dishes/dish.model'
 
 export function toChefDTO(
   chef: HydratedDocument<ChefDoc>,

@@ -1,9 +1,9 @@
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import { connectDB } from '../config/db'
-import { ChefModel } from '../models/chef.model'
-import { RestaurantModel } from '../models/restaurant.model'
-import { DishModel } from '../models/dish.model'
+import { ChefModel } from '../chefs/chef.model'
+import { RestaurantModel } from '../restaurants/restaurant.model'
+import { DishModel } from '../dishes/dish.model'
 
 dotenv.config()
 
