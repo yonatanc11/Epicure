@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import * as controller from '../controllers/dishes.controller'
+import * as controller from './dishes.controller'
 
 export const dishesRouter = Router()
 
