@@ -2,9 +2,8 @@
   "name": "@epicure/backend",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
-    "dev": "tsx watch src/main.ts",
+    "dev": "nest start --watch",
     "setup": "tsx src/scripts/setupAtlas.ts",
     "seed": "tsx src/scripts/seed.ts",
     "build": "tsc -p tsconfig.json",
