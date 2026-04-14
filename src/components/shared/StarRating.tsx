@@ -14,7 +14,7 @@ export default function StarRating({ rating, maxStars = 5 }: StarRatingProps) {
           key={i}
           src={i < rating ? starFull : starEmpty}
           alt={i < rating ? 'filled star' : 'empty star'}
-          className="w-5 h-5"
+          className="w-5 h-5 md:w-7 md:h-7"
         />
       ))}
     </div>

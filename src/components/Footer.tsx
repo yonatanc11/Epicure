@@ -2,14 +2,16 @@ import { NAV_LINKS } from '../constants/navigation'
 
 function Footer() {
   return (
-    <footer className="px-6 py-8">
-      <nav className="flex flex-col gap-6">
-        {NAV_LINKS.secondary.map((link) => (
-          <a key={link.path} href={link.path} className="text-body">
-            {link.label}
-          </a>
-        ))}
-      </nav>
+    <footer className="px-6 py-8 border-t border-gray-200">
+      <div className="max-w-5xl mx-auto w-full">
+        <nav className="flex flex-col md:flex-row md:justify-center md:items-center gap-6 md:gap-12">
+          {NAV_LINKS.secondary.map((link) => (
+            <a key={link.path} href={link.path} className="text-body hover:text-primary transition-colors">
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      </div>
     </footer>
   )
 }

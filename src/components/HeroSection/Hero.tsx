@@ -22,7 +22,7 @@ export default function Hero() {
             <input
               type="text"
               placeholder={LABELS.searchPlaceholder}
-              className={`w-full ${isMobile ? 'text-body' : 'desktop-text-body'}`}
+              className={`w-full bg-transparent focus:outline-none ${isMobile ? 'text-body' : 'desktop-text-body'}`}
             />
           </div>
         </div>

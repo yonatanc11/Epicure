@@ -6,7 +6,7 @@ function IconsMeaning() {
     const isMobile = useMobile()
 
     return (
-        <section className="px-6 py-8 text-center">
+        <section className="px-6 py-8 text-center bg-bg">
             <h2 className={`mb-6 ${isMobile ? 'text-h2' : 'desktop-text-h2'}`}>{LABELS.iconsMeaning}</h2>
             <div className={`flex items-center ${isMobile ? 'flex-col gap-6' : 'flex-row justify-center gap-10'}`}>
                 {Object.values(ICON_TYPES).map((icon) => (

@@ -15,6 +15,9 @@ import veganBigIcon from '../assets/icons/VeganBig.svg'
 import vegetarianSmallIcon from '../assets/icons/VegetarianSmall.svg'
 import vegetarianBigIcon from '../assets/icons/VegetarianBig.svg'
 import hamburgerIcon from '../assets/icons/Hamburger.svg'
+import googleIcon from '../assets/icons/googleIcon.svg'
+import appleIcon from '../assets/icons/appleIcon.svg'
+import logoBigIcon from '../assets/images/logoBig.svg'
 import logoImg from '../assets/images/logo.png'
 
 export const ICONS = {
@@ -35,5 +38,8 @@ export const ICONS = {
   vegetarianSmall: vegetarianSmallIcon,
   vegetarianBig: vegetarianBigIcon,
   hamburger: hamburgerIcon,
+  google: googleIcon,
+  apple: appleIcon,
+  logoBig: logoBigIcon,
   logo: logoImg,
 }

@@ -9,6 +9,7 @@ export default function SignatureDishes() {
 
     return (
         <section className="px-6 py-8">
+            <div className="max-w-5xl mx-auto w-full">
             <h2 className={`mb-4 ${isMobile ? 'text-h2 text-left' : 'desktop-text-h2 text-center'}`}>{LABELS.signatureDishes}</h2>
             <CardCarousel>
                 {dishes.map((dish) => (
@@ -19,12 +20,14 @@ export default function SignatureDishes() {
                         ingredients={dish.ingredients}
                         icon={dish.icon}
                         price={dish.price}
+                        imageClass={isMobile ? 'aspect-video' : 'aspect-square'}
                     />
                 ))}
             </CardCarousel>
             <a href="/restaurants" className={`flex items-center gap-1 mt-4 text-body ${isMobile ? 'justify-start' : 'justify-end'}`}>
                 {LABELS.allRestaurants} ≫
             </a>
+            </div>
         </section>
     )
 }
