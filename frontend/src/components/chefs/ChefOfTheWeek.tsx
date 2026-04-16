@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import type { ChefDTO } from '@epicure/shared'
+import type { ChefDTO } from '../../types'
 import { LABELS } from '../../constants/strings'
 import CardCarousel from '../CardCarousel'
 import RestaurantCard from '../shared/RestaurantCard'

@@ -1,4 +1,23 @@
-import type { ChefDTO, RestaurantDTO, DishDTO } from '@epicure/shared'
+import type { ChefDTO, RestaurantDTO, DishDTO } from '../types'
+
+/* ── raw backend response shapes ── */
+
+interface ChefRaw {
+  id: string
+  name: string
+  image: string
+  bio?: string
+}
+
+interface RestaurantRaw {
+  id: string
+  name: string
+  image: string
+  rating: number
+  chefId: string
+}
+
+/* ── helpers ── */
 
 async function get<T>(path: string): Promise<T> {
   const res = await fetch(path)
@@ -6,14 +25,74 @@ async function get<T>(path: string): Promise<T> {
   return res.json() as Promise<T>
 }
 
+/* ── public API ── */
+
 export const api = {
   chefs: {
-    list: () => get<ChefDTO[]>('/api/chefs'),
-    byId: (id: string) => get<ChefDTO>(`/api/chefs/${id}`),
+    list: async (): Promise<ChefDTO[]> => {
+      const chefs = await get<ChefRaw[]>('/api/chefs')
+      const enriched = await Promise.all(
+        chefs.map(async (chef) => {
+          const rawRestaurants = await get<RestaurantRaw[]>(
+            `/api/restaurants?chefId=${chef.id}`,
+          )
+          return {
+            ...chef,
+            restaurants: rawRestaurants.map((r) => ({
+              id: r.id,
+              name: r.name,
+              image: r.image,
+              rating: r.rating,
+              chef: chef.name,
+            })),
+          }
+        }),
+      )
+      return enriched
+    },
+    byId: async (id: string): Promise<ChefDTO> => {
+      const chef = await get<ChefRaw>(`/api/chefs/${id}`)
+      const rawRestaurants = await get<RestaurantRaw[]>(
+        `/api/restaurants?chefId=${chef.id}`,
+      )
+      return {
+        ...chef,
+        restaurants: rawRestaurants.map((r) => ({
+          id: r.id,
+          name: r.name,
+          image: r.image,
+          rating: r.rating,
+          chef: chef.name,
+        })),
+      }
+    },
   },
   restaurants: {
-    list: () => get<RestaurantDTO[]>('/api/restaurants'),
-    byId: (id: string) => get<RestaurantDTO>(`/api/restaurants/${id}`),
+    list: async (): Promise<RestaurantDTO[]> => {
+      const [rawRestaurants, chefs] = await Promise.all([
+        get<RestaurantRaw[]>('/api/restaurants'),
+        get<ChefRaw[]>('/api/chefs'),
+      ])
+      const chefMap = new Map(chefs.map((c) => [c.id, c.name]))
+      return rawRestaurants.map((r) => ({
+        id: r.id,
+        name: r.name,
+        image: r.image,
+        rating: r.rating,
+        chef: chefMap.get(r.chefId) ?? '',
+      }))
+    },
+    byId: async (id: string): Promise<RestaurantDTO> => {
+      const r = await get<RestaurantRaw>(`/api/restaurants/${id}`)
+      const chef = await get<ChefRaw>(`/api/chefs/${r.chefId}`)
+      return {
+        id: r.id,
+        name: r.name,
+        image: r.image,
+        rating: r.rating,
+        chef: chef.name,
+      }
+    },
   },
   dishes: {
     list: () => get<DishDTO[]>('/api/dishes'),
