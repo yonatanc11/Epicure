@@ -29,27 +29,7 @@ async function get<T>(path: string): Promise<T> {
 
 export const api = {
   chefs: {
-    list: async (): Promise<ChefDTO[]> => {
-      const chefs = await get<ChefRaw[]>('/api/chefs')
-      const enriched = await Promise.all(
-        chefs.map(async (chef) => {
-          const rawRestaurants = await get<RestaurantRaw[]>(
-            `/api/restaurants?chefId=${chef.id}`,
-          )
-          return {
-            ...chef,
-            restaurants: rawRestaurants.map((r) => ({
-              id: r.id,
-              name: r.name,
-              image: r.image,
-              rating: r.rating,
-              chef: chef.name,
-            })),
-          }
-        }),
-      )
-      return enriched
-    },
+    list: () => get<ChefDTO[]>('/api/chefs'),
     byId: async (id: string): Promise<ChefDTO> => {
       const chef = await get<ChefRaw>(`/api/chefs/${id}`)
       const rawRestaurants = await get<RestaurantRaw[]>(

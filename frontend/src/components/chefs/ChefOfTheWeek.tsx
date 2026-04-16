@@ -12,7 +12,10 @@ function ChefOfTheWeek() {
     const [chef, setChef] = useState<ChefDTO | null>(null)
 
     useEffect(() => {
-        api.chefs.list().then((chefs) => setChef(chefs[0] ?? null)).catch(console.error)
+        api.chefs.list()
+            .then((chefs) => chefs[0] ? api.chefs.byId(chefs[0].id) : null)
+            .then((chef) => setChef(chef))
+            .catch(console.error)
     }, [])
 
     if (!chef) return null
@@ -28,7 +31,7 @@ function ChefOfTheWeek() {
                 {LABELS.chefRestaurants(chef.name)}
             </h3>
             <CardCarousel slidesPerView={{ mobile: 2, desktop: 5 }}>
-                {chef.restaurants.map((restaurant) => (
+                {(chef.restaurants ?? []).map((restaurant) => (
                     <RestaurantCard
                         key={restaurant.id}
                         image={restaurant.image}

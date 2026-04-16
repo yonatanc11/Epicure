@@ -5,7 +5,7 @@ export interface ChefDTO {
   name: string
   image: string
   bio?: string
-  restaurants: RestaurantDTO[]
+  restaurants?: RestaurantDTO[]
 }
 
 export type Chef = ChefDTO
