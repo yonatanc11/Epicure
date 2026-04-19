@@ -1,9 +1,9 @@
 export interface RestaurantDTO {
   id: string
   name: string
-  chef: string
   image: string
-  rating?: number
+  rating: number
+  chefId: string
 }
 
 export type Restaurant = RestaurantDTO

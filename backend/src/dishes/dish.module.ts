@@ -1,18 +1,18 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { ChefsController } from './chef.controller';
-import { ChefsService } from './chef.service';
 import { Restaurant, RestaurantSchema } from '../restaurants/schemas/restaurant.schema';
-import { Chef, ChefSchema } from './schemas/chef.schema';
+import { DishesController } from './dish.controller';
+import { DishesService } from './dish.service';
+import { Dish, DishSchema } from './schemas/dish.schema';
 
 @Module({
   imports: [
     MongooseModule.forFeature([
-      { name: Chef.name, schema: ChefSchema },
+      { name: Dish.name, schema: DishSchema },
       { name: Restaurant.name, schema: RestaurantSchema },
     ]),
   ],
-  controllers: [ChefsController],
-  providers: [ChefsService]
+  controllers: [DishesController],
+  providers: [DishesService],
 })
-export class ChefsModule {}
+export class DishesModule {}
