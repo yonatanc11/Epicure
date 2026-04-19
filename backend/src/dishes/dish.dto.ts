@@ -6,8 +6,8 @@ export interface DishDTO {
   ingredients: string
   icon?: DishIcon
   price: number
-  restaurant: string
   image: string
+  restaurantId: string
 }
 
 export type Dish = DishDTO
