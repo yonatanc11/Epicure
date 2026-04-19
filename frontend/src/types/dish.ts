@@ -1,11 +1,11 @@
-import type { IconType } from '../constants/strings'
+export type DishIcon = 'spicy' | 'vegetarian' | 'vegan'
 
-export interface Dish {
+export interface DishDTO {
   id: string
   name: string
   ingredients: string
-  icon?: IconType
+  icon?: DishIcon
   price: number
-  restaurant: string
   image: string
+  restaurantId: string
 }
