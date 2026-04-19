@@ -2,6 +2,7 @@ import { BadRequestException, Injectable, NotFoundException } from '@nestjs/comm
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Chef } from '../chefs/schemas/chef.schema';
+import { Dish } from '../dishes/schemas/dish.schema';
 import { Restaurant } from './schemas/restaurant.schema';
 import { CreateRestaurantDto, UpdateRestaurantDto } from './restaurant.input';
 
@@ -11,6 +12,7 @@ export class RestaurantsService {
   constructor(
     @InjectModel(Restaurant.name) private restaurantModel: Model<Restaurant>,
     @InjectModel(Chef.name) private chefModel: Model<Chef>,
+    @InjectModel(Dish.name) private dishModel: Model<Dish>,
   ) { }
 
   async create(dto: CreateRestaurantDto) {
@@ -30,6 +32,7 @@ export class RestaurantsService {
   async remove(id: string) {
     const restaurant = await this.restaurantModel.findByIdAndDelete(id).exec();
     if (!restaurant) throw new NotFoundException(`Restaurant with ID ${id} not found`);
+    await this.dishModel.deleteMany({ restaurantId: id }).exec();
     return restaurant;
   }
 
