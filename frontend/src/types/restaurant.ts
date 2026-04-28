@@ -1,7 +1,7 @@
-export interface Restaurant {
+export interface RestaurantDTO {
   id: string
   name: string
-  chef: string
   image: string
-  rating?: number
+  rating: number
+  chef: string
 }
